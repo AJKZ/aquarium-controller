@@ -51,13 +51,13 @@ static const uint8_t dim[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
 
 Time::Time()
 {
-	this->year = 2014;
-	this->mon  = 1;
-	this->date = 1;
+	this->year = 2021;
+	this->mon  = 2;
+	this->date = 5;
 	this->hour = 0;
-	this->min  = 0;
+	this->min  = 35;
 	this->sec  = 0;
-	this->dow  = 3;
+	this->dow  = 5;
 }
 
 DS3231::DS3231(uint8_t data_pin, uint8_t sclk_pin)
@@ -404,7 +404,7 @@ uint8_t DS3231::_readByte()
 	{
 		digitalWrite(_scl_pin, HIGH);
 		currentBit = digitalRead(_sda_pin);
-		value |= (currentBit << 7-i);
+		value |= (currentBit << (7-i));
 		delayMicroseconds(1);
 		digitalWrite(_scl_pin, LOW);
 	}
