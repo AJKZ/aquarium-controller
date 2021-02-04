@@ -15,6 +15,10 @@ void setup()
   pinMode(wLed, OUTPUT);
   pinMode(rbLed, OUTPUT);  
   clock.begin();
+
+  // clock.setDOW(FRIDAY);
+  // clock.setTime(00, 40, 0);
+  // clock.setDate(5, 2, 2021);
 }
 
 void loop()
