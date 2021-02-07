@@ -47,8 +47,6 @@ void loop()
       fadeOn(PIN_LED_MIDDLE);
       fadeOn(PIN_LED_FAR);
     }
-    digitalWrite(PIN_LED_R, HIGH);
-    digitalWrite(PIN_LED_B, HIGH);
   }
   
   // on
