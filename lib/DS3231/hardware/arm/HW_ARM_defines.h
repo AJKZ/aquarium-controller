@@ -1,4 +1,4 @@
-// *** Hardwarespecific defines ***
+// *** Hardware specific defines ***
 #define SDA		20
 #define SCL		21
 #define SDA1	70

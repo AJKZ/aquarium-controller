@@ -1,4 +1,4 @@
-// *** Hardwarespecific defines ***
+// *** Hardware specific defines ***
 #define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
 
 #ifndef TWI_FREQ

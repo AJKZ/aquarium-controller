@@ -1,4 +1,4 @@
-// *** Hardwarespecific defines ***
+// *** Hardware specific defines ***
 
 #if !defined(_UP_MCU_)
 	#if defined(__32MX320F128H__)
