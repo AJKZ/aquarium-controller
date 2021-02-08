@@ -9,13 +9,13 @@ int hour, minute;
 
 void fadeOn(int pin)
 {
-  int val = map(minute, 0, 59, 1, 255);
+  int val = map(minute, 30, 59, 124, 255);
   analogWrite(pin, val);
 }
 
 void fadeOff(int pin)
 {
-  int val = map(minute, 0, 59, 255, 0);
+  int val = map(minute, 0, 30, 255, 0);
   analogWrite(pin, val);
 }
 
@@ -29,9 +29,9 @@ void setup()
   pinMode(PIN_LED_R, OUTPUT);
   pinMode(PIN_LED_B, OUTPUT);
 
-  // clock.setDOW(FRIDAY);
-  // clock.setTime(00, 40, 0);
-  // clock.setDate(5, 2, 2021);
+  // clock.setDOW(SUNDAY);
+  // clock.setTime(22, 20, 0);
+  // clock.setDate(7, 2, 2021);
 }
 
 void loop()
@@ -39,6 +39,7 @@ void loop()
   String current_time = clock.getTimeStr();
   hour = current_time.substring(0,2).toInt();
   minute = current_time.substring(3,5).toInt();
+  // Serial.println(current_time);
 
   // first hour, fade on
   if(hour == T_HOUR_ON) {
